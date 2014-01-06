@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.2.0'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.0.13'
+}
+
+war {
+    from 'src/main/groovy'
+}
+
+task copyWar(type: Copy, dependsOn:'war') {
+    from "build/libs/simple-web-app.war"
+    into '/opt/jetty/webapps'
+}

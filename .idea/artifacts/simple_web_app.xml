@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="simple-web-app">
+    <output-path>$PROJECT_DIR$/out/artifacts/simple_web_app</output-path>
+    <root id="archive" name="simple-web-app.war">
+      <element id="javaee-facet-resources" facet="simple-web-app/web/Web Gradle" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="simple-web-app" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: logback-core-1.0.13" />
+          <element id="library" level="project" name="Gradle: slf4j-api-1.7.5" />
+          <element id="library" level="project" name="Gradle: groovy-all-2.2.0" />
+          <element id="library" level="project" name="Gradle: logback-classic-1.0.13" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/simple_web_app/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
